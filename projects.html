@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - Neelima Bhaktha</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#111184',
+                        brandYellow: '#FFDE21',
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandBlue text-white font-mono antialiased relative">
+    <div class="page-frame"></div>
+
+    <div class="max-w-4xl mx-auto px-8 py-20 relative z-10">
+        <a href="index.html" class="inline-block mb-12 text-gray-300 hover:text-brandYellow font-bold uppercase tracking-wider transition-colors">
+            &larr; Back to Home
+        </a>
+
+        <h1 class="text-3xl md:text-5xl font-bold mb-16 uppercase tracking-wider">All Projects</h1>
+
+        <div class="space-y-12">
+            
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-card block">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="project-image"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Pingaara</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Designed and built a modern restaurant website using the MERN stack for a local coastal restaurant in Karkala. Worked on both the frontend and backend to deliver a responsive, user-friendly experience.
+                        </p>
+                        <div class="flex gap-4 text-xs font-bold uppercase tracking-widest text-brandYellow">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-card block">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="project-image"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Certificate Authenticator</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Built a blockchain-based application to issue and verify digital certificates securely. Used smart contracts to store certificate records and created a simple interface for institutions and users to generate, manage, and validate certificates.
+                        </p>
+                        <div class="flex gap-4 text-xs font-bold uppercase tracking-widest text-brandYellow">
+                            <span>Solidity</span>
+                            <span>React</span>
+                            <span>Web3</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-card block">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="project-image"></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Travell</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Built a mobile application to help manage daily cab operations, including driver activity and trip records. Used React Native and Firebase to create a simple, reliable system for tracking vehicles, drivers, and trip details.
+                        </p>
+                        <div class="flex gap-4 text-xs font-bold uppercase tracking-widest text-brandYellow">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

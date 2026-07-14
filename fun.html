@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Fun - Neelima Bhaktha</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#111184',
+                        brandYellow: '#FFDE21',
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brandBlue text-white font-mono antialiased relative min-h-screen flex flex-col">
+    <div class="page-frame"></div>
+
+    <div class="flex-grow flex flex-col items-center justify-center p-8 text-center z-10 relative">
+        <h1 class="text-3xl md:text-5xl font-bold mb-8 uppercase tracking-wider text-brandYellow">Cube Net Printing Interface</h1>
+        <p class="text-xl text-gray-300 max-w-2xl leading-relaxed mb-12">
+            This space is reserved for the upcoming interactive cube net printing experience as discussed. We'll work on this part later!
+        </p>
+        
+        <a href="index.html" class="inline-block px-8 py-4 border-2 border-brandYellow text-brandYellow hover:bg-brandYellow hover:text-brandBlue font-bold uppercase tracking-wider transition-colors">
+            Return to Portfolio
+        </a>
+    </div>
+</body>
+</html>

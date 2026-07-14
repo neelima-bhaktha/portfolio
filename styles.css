@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+
+::selection {
+    background-color: #FFDE21;
+    color: #111184;
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #111184;
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Yellow Dashed Border Frame */
+.page-frame {
+    position: fixed;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    border: 2px dashed #FFDE21;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Header link drop shadow active state */
+.nav-link {
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    filter: drop-shadow(0px 0px 8px rgba(255, 222, 33, 0.6));
+    color: #FFDE21;
+}
+
+/* Profile Image Hover Tilt */
+.profile-image {
+    transition: transform 0.3s ease;
+}
+.profile-image:hover {
+    transform: rotate(5deg) scale(1.02);
+}
+
+/* Experience Container styles from Figma */
+.experience-container {
+    background-color: #111184;
+    border-radius: 130px;
+    box-shadow: 
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), /* inner stroke */
+        -17px 18px 15.7px 14px rgba(0, 0, 0, 0.25); /* drop shadow */
+    transition: transform 0.3s ease;
+    display: block; /* Since it will be an <a> tag */
+    text-decoration: none;
+    color: inherit;
+    padding: 3rem 4rem;
+}
+.experience-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Project card styles */
+.project-card {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.project-card:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+.project-image {
+    width: 200px;
+    height: 120px;
+    background-color: #d1d5db; /* gray-300 */
+    flex-shrink: 0;
+}
+
+/* Marquee for tech stack */
+.marquee-container {
+    background-color: #111184;
+    border-radius: 130px;
+    box-shadow: 
+        inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25),
+        -10px 12px 10px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    animation: marquee 20s linear infinite;
+    /* Ensure there's enough content to scroll without breaking */
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.tech-icon {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.fun-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+.fun-link:hover {
+    color: #FFDE21;
+    text-shadow: 0px 0px 8px rgba(255, 222, 33, 0.6);
+}
+
+.social-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111184;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.social-icon:hover {
+    transform: translateY(-5px);
+    background-color: #FFDE21;
+}
