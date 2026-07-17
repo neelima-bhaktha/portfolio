@@ -15,7 +15,7 @@ body {
 
 /* Yellow Dashed Border Frame */
 .page-frame {
-    position: fixed;
+    position: absolute;
     top: 15px;
     bottom: 15px;
     left: 15px;
@@ -51,12 +51,12 @@ body {
 /* Experience Container styles from Figma */
 .experience-container {
     background-color: #111184;
-    border-radius: 130px;
+    border-radius: 120px;
     box-shadow: 
         inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), /* inner stroke */
         -17px 18px 15.7px 14px rgba(0, 0, 0, 0.25); /* drop shadow */
     transition: transform 0.3s ease;
-    display: block; /* Since it will be an <a> tag */
+    /*display: block; /* Since it will be an <a> tag */
     text-decoration: none;
     color: inherit;
     padding: 3rem 4rem;
