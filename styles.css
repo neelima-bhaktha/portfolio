@@ -48,18 +48,25 @@ body {
     75% { transform: rotate(-5deg) scale(1.02); }
 }
 
-/* Experience Container styles from Figma */
 .experience-container {
     background-color: #111184;
-    border-radius: 120px;
+    border-radius: 3rem; /* Adjusted for mobile */
     box-shadow: 
         inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), /* inner stroke */
-        -17px 18px 15.7px 14px rgba(0, 0, 0, 0.25); /* drop shadow */
+        -10px 10px 10px 8px rgba(0, 0, 0, 0.25); /* drop shadow */
     transition: transform 0.3s ease;
-    /*display: block; /* Since it will be an <a> tag */
     text-decoration: none;
     color: inherit;
-    padding: 3rem 4rem;
+    padding: 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+    .experience-container {
+        border-radius: 120px;
+        padding: 3rem 4rem;
+        box-shadow: 
+            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.25), /* inner stroke */
+            -17px 18px 15.7px 14px rgba(0, 0, 0, 0.25); /* drop shadow */
+    }
 }
 .experience-container:hover {
     transform: translateY(-5px);
@@ -68,25 +75,41 @@ body {
 /* Project card styles */
 .project-card {
     display: flex;
-    gap: 2rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease;
     padding: 1rem;
     border-radius: 1rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .project-card {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+        text-align: left;
+    }
 }
 .project-card:hover {
     background-color: rgba(255, 255, 255, 0.05);
     transform: translateX(10px);
 }
 .project-image {
-    width: 200px;
-    height: 120px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
     object-fit: cover;
     border-radius: 0.5rem;
-    /*background-color: #d1d5db; /* gray-300 */
     flex-shrink: 0;
+}
+@media (min-width: 768px) {
+    .project-image {
+        width: 200px;
+        height: 120px;
+    }
 }
 
 /* Marquee for tech stack */
