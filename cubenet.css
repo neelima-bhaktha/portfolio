@@ -1,0 +1,145 @@
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: #111184;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.print-instruction {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.print-instruction h1 {
+    color: #FFDE21;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.print-instruction p {
+    color: #d1d5db;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-group button, .btn-group a {
+    background-color: #FFDE21;
+    color: #111184;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-group button:hover, .btn-group a:hover {
+    background-color: #ffffff;
+}
+
+.cubenet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2in);
+    grid-template-rows: repeat(3, 2in);
+    gap: 0;
+    width: 8in;
+    margin: 0 auto;
+    /* Center in page */
+    justify-content: center;
+}
+
+.face {
+    width: 2in;
+    height: 2in;
+    border: 2px dashed #FFDE21;
+    background-color: #111184;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    position: relative;
+}
+
+.face h1 { font-size: 18px; color: #FFDE21; margin: 0 0 5px; text-transform: uppercase; line-height: 1.1; }
+.face h2 { font-size: 14px; color: #FFDE21; margin: 0 0 10px; text-transform: uppercase; }
+.face p { margin: 3px 0; }
+.no-bullets { list-style: none; padding: 0; margin: 0; }
+.no-bullets li { margin: 4px 0; }
+
+.face-top { grid-column: 2; grid-row: 1; }
+.face-left { grid-column: 1; grid-row: 2; }
+.face-front { grid-column: 2; grid-row: 2; border-width: 2px; }
+.face-right { grid-column: 3; grid-row: 2; }
+.face-back { grid-column: 4; grid-row: 2; }
+.face-bottom { grid-column: 2; grid-row: 3; }
+
+/* Tabs for gluing */
+.tab {
+    position: absolute;
+    background-color: #111184;
+    border: 2px dashed #FFDE21;
+    z-index: -1;
+}
+
+.tab-top {
+    top: -20px; left: 10px; right: 10px; height: 20px;
+    border-bottom: none;
+    clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 100%, 0 100%);
+}
+
+.tab-bottom {
+    bottom: -20px; left: 10px; right: 10px; height: 20px;
+    border-top: none;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 10px 100%);
+}
+
+.tab-left {
+    left: -20px; top: 10px; bottom: 10px; width: 20px;
+    border-right: none;
+    clip-path: polygon(0 10px, 100% 0, 100% 100%, 0 calc(100% - 10px));
+}
+
+.tab-right {
+    right: -20px; top: 10px; bottom: 10px; width: 20px;
+    border-left: none;
+    clip-path: polygon(0 0, 100% 10px, 100% calc(100% - 10px), 0 100%);
+}
+
+/* Print specific styles */
+@media print {
+    body {
+        background-color: transparent;
+        color: black;
+    }
+    
+    .print-instruction {
+        display: none;
+    }
+    
+    .face, .tab {
+        /* Force background colors to print if user has setting enabled */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    @page {
+        margin: 0.5in;
+        size: landscape; /* Fits better in landscape */
+    }
+}
